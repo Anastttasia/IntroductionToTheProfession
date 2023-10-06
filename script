@@ -1,24 +1,15 @@
-git clear
-
-
-
-
-\\второй скрипт
-
-git show
-
-
 
 //Задание 6
 echo 'Вы в репозитории: '
 echo git status
-echo 'Если вы хотите очистить репозиторий, то нажмите 3 '
+echo 'Если вы хотите очистить репозиторий, то нажмите y '
+read answerUser
 
-if ( нажал )
+if ( $answerUser is 'y' )
 then
     echo << git clean -f -d -x -n
 else 
-    выход
+    echo 'Вы ввели неверный символсл.Если вы хотите очистить репозиторий, то нажмите y '
 
 //Задание 7
 if (git status -s == 'dev')
@@ -29,8 +20,8 @@ then
 
     git commit
     echo 'Введи тэг'
-    tttag <- read (считай имя тэга с клавы и засунь в переменную tttag)
-    git tag tttag
+    read tagName
+    git tag tagName
     git push
 else
     echo 'Ты уже на ветке prd коммить и пуш'
