@@ -1,0 +1,37 @@
+git clear
+
+
+
+
+\\второй скрипт
+
+git show
+
+
+
+//Задание 6
+echo 'Вы в репозитории: '
+echo git status
+echo 'Если вы хотите очистить репозиторий, то нажмите 3 '
+
+if ( нажал )
+then
+    echo << git clean -f -d -x -n
+else 
+    выход
+
+//Задание 7
+if (git status -s == 'dev')
+then
+    git diff > mychange.diff
+    git checkout prd
+    git apply mychange.diff
+
+    git commit
+    echo 'Введи тэг'
+    tttag <- read (считай имя тэга с клавы и засунь в переменную tttag)
+    git tag tttag
+    git push
+else
+    echo 'Ты уже на ветке prd коммить и пуш'
+
